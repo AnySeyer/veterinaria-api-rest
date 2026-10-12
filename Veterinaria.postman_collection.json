@@ -1,0 +1,357 @@
+{
+  "info": {
+    "_postman_id": "01732a9a-c66a-4ace-a463-9243d36226eb",
+    "name": "Veterinaria - API REST",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58584302",
+    "_collection_link": "https://go.postman.co/collection/58584302-01732a9a-c66a-4ace-a463-9243d36226eb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 - Listar adoptantes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/adoptantes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "adoptantes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02 - Buscar adoptante por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/adoptantes/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "adoptantes",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 - Registrar adoptante",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Laura\",\r\n  \"apellido\": \"Martinez\",\r\n  \"telefono\": \"8441234567\",\r\n  \"correo\": \"lauramartinez@gmail.com\",\r\n  \"direccion\": \"Saltillo, Coahuila\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/adoptantes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "adoptantes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 - Actualizar adoptante",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Laura\",\r\n  \"apellido\": \"Martinez\",\r\n  \"telefono\": \"8441234567\",\r\n  \"correo\": \"lauramartinezactualizada@gmail.com\",\r\n  \"direccion\": \"Saltillo, Coahuila\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/adoptantes/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "adoptantes",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05 - Eliminar adoptante (borrado lógico)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/adoptantes/5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "adoptantes",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06 - Registrar mascota",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Max\",\r\n  \"especie\": \"Perro\",\r\n  \"raza\": \"Labrador\",\r\n  \"edad\": 2,\r\n  \"sexo\": \"Macho\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/mascotas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "mascotas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07 - Asignar mascota a adoptante",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/mascotas/2/adoptante/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "mascotas",
+            "2",
+            "adoptante",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "08 - Registrar vacuna",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"idMascota\": 2,\r\n  \"nombreVacuna\": \"Antirrabica\",\r\n  \"descripcion\": \"Vacuna preventiva contra la rabia\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/vacunas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "vacunas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "09 - Registrar chip de rastreo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"idMascota\": 2,\r\n  \"codigoChip\": \"CHIP-ROCKY-003\",\r\n  \"fabricante\": \"PetTrack\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/chips",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "chips"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10 - Programar cita de seguimiento",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"idMascota\": 2,\r\n  \"fechaCita\": \"2026-11-25T10:30:00\",\r\n  \"motivo\": \"Revision de seguimiento veterinario de Rocky\",\r\n  \"observaciones\": \"Cita de seguimiento con vacunas registradas\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/citas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11 - Consultar mascotas por adoptante",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/adoptantes/4/mascotas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "adoptantes",
+            "4",
+            "mascotas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "12 - Consultar vacunas de una mascota",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/mascotas/2/vacunas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "mascotas",
+            "2",
+            "vacunas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "13 - Cancelar cita de seguimiento",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/citas/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "14 - Reporte de mascotas vacunadas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/reportes/mascotas-vacunadas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reportes",
+            "mascotas-vacunadas"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
